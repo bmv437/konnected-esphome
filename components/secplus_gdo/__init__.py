@@ -22,6 +22,7 @@ import esphome.config_validation as cv
 import voluptuous as vol
 from esphome import pins
 from esphome.const import CONF_ID
+from esphome.core import CORE, Define
 
 DEPENDENCIES = ["preferences"]
 MULTI_CONF = True
@@ -55,3 +56,8 @@ async def to_code(config):
     await cg.register_component(var, config)
     cg.add_define("GDO_UART_TX_PIN", config[CONF_OUTPUT_GDO]['number'])
     cg.add_define("GDO_UART_RX_PIN", config[CONF_INPUT_GDO]['number'])
+
+    # Disable ESPHome's built-in crash handler (USE_ESP32_CRASH_HANDLER) to avoid
+    # a linker conflict with secplus_gdo's __wrap_esp_panic_handler, which disables
+    # the GDO UART TX pin on panic to prevent spurious garage door activation.
+    CORE.defines.discard(Define("USE_ESP32_CRASH_HANDLER"))

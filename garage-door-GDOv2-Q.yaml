@@ -34,7 +34,6 @@
 # Customize these variables to your preferences and needs
 # more: https://esphome.io/guides/configuration-types.html#substitutions
 substitutions:
-
   ####
   # NAME
   # By default, the name of the ESPHome device is "konnected-xxxxxx" where xxxxxx is a unique identifier. The device's
@@ -53,7 +52,6 @@ substitutions:
   garage_motor_name: Motor
   garage_button_name: Wall Button
   garage_sync_name: Synced
-
 
   ####
   # GARAGE DOOR CLOSE WARNING DURATION
@@ -77,9 +75,9 @@ substitutions:
   input2: GPIO9
 
 external_components:
-  - source: github://konnected-io/konnected-esphome@master
+  - source: github://bmv437/konnected-esphome@bypass-esphome-crash-handler
     refresh: 5min
-    components: [ secplus_gdo ]
+    components: [secplus_gdo]
 
   # Un-comment below and comment above for local modification
   # - source:
@@ -92,13 +90,11 @@ external_components:
 # Each package includes a Garage Door Opener feature described
 # Remove or comment out any packages that you do not need or want.
 packages:
-
   remote_package:
-    url: https://github.com/konnected-io/konnected-esphome
+    url: https://github.com/bmv437/konnected-esphome
     ref: master
     refresh: 5min
     files:
-
       ####
       # CORE
       # This package is required and sets up core ESPHome features.
@@ -145,7 +141,7 @@ packages:
 # Enables automatic discovery and upgrades via ESPHome Dashboard
 # more: https://esphome.io/guides/getting_started_hassio.html
 dashboard_import:
-  package_import_url: github://konnected-io/konnected-esphome/garage-door-GDOv2-Q.yaml@master
+  package_import_url: github://bmv437/konnected-esphome/garage-door-GDOv2-Q.yaml@master
   import_full_config: false
 
 ####
