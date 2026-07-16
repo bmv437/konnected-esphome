@@ -7,4 +7,4 @@
 # compatibility.
 
 packages:
-  gdov2_s: github://konnected-io/konnected-esphome/garage-door-GDOv2-S.yaml
+  gdov2_s: github://bmv437/konnected-esphome/garage-door-GDOv2-S.yaml@fix/esphome-2026.7-compile-buildable

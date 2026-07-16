@@ -77,7 +77,7 @@ substitutions:
   input2: GPIO9
 
 external_components:
-  - source: github://konnected-io/konnected-esphome@master
+  - source: github://bmv437/konnected-esphome@fix/esphome-2026.7-compile-buildable
     refresh: 5min
     components: [ secplus_gdo ]
 
@@ -94,8 +94,8 @@ external_components:
 packages:
 
   remote_package:
-    url: https://github.com/konnected-io/konnected-esphome
-    ref: master
+    url: https://github.com/bmv437/konnected-esphome
+    ref: fix/esphome-2026.7-compile-buildable
     refresh: 5min
     files:
 
@@ -145,7 +145,7 @@ packages:
 # Enables automatic discovery and upgrades via ESPHome Dashboard
 # more: https://esphome.io/guides/getting_started_hassio.html
 dashboard_import:
-  package_import_url: github://konnected-io/konnected-esphome/garage-door-GDOv2-Q.yaml@master
+  package_import_url: github://bmv437/konnected-esphome/garage-door-GDOv2-Q.yaml@fix/esphome-2026.7-compile-buildable
   import_full_config: false
 
 ####

@@ -84,7 +84,7 @@ substitutions:
   input2: GPIO9
 
 external_components:
-  - source: github://konnected-io/konnected-esphome@master
+  - source: github://bmv437/konnected-esphome@fix/esphome-2026.7-compile-buildable
     components: [ secplus_gdo ]
 
   # Un-comment below and comment above for local modification
@@ -107,8 +107,8 @@ esp32:
 packages:
 
   remote_package:
-    url: https://github.com/konnected-io/konnected-esphome
-    ref: master
+    url: https://github.com/bmv437/konnected-esphome
+    ref: fix/esphome-2026.7-compile-buildable
     refresh: 5min
     files:
 

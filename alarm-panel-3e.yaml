@@ -107,8 +107,8 @@ substitutions:
 packages:
 
   remote_package:
-    url: https://github.com/konnected-io/konnected-esphome
-    ref: master
+    url: https://github.com/bmv437/konnected-esphome
+    ref: fix/esphome-2026.7-compile-buildable
     refresh: 5min
     files:
 
@@ -150,7 +150,7 @@ packages:
       - packages/buzzer-rtttl.yaml
 
 dashboard_import:
-  package_import_url: github://konnected-io/konnected-esphome/alarm-panel-3e.yaml@master
+  package_import_url: github://bmv437/konnected-esphome/alarm-panel-3e.yaml@fix/esphome-2026.7-compile-buildable
   import_full_config: false
 
 ####

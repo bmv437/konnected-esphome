@@ -108,8 +108,8 @@ substitutions:
 packages:
 
   remote_package:
-    url: https://github.com/konnected-io/konnected-esphome
-    ref: master
+    url: https://github.com/bmv437/konnected-esphome
+    ref: fix/esphome-2026.7-compile-buildable
     refresh: 5min
     files:
 
@@ -180,7 +180,7 @@ esp32:
 # Enables automatic discovery and upgrades via ESPHome Dashboard
 # more: https://esphome.io/guides/getting_started_hassio.html
 dashboard_import:
-  package_import_url: github://konnected-io/konnected-esphome/examples/GDOv2-S-wired-sensor-only.yaml
+  package_import_url: github://bmv437/konnected-esphome/examples/GDOv2-S-wired-sensor-only.yaml@fix/esphome-2026.7-compile-buildable
   import_full_config: false
 
 #### 
